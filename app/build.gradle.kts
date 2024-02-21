@@ -5,6 +5,9 @@ plugins {
  //   kotlin("kapt")
    // id("com.google.dagger.hilt.android")
 
+   // id 'com.google.relay' version '0.3.11'
+    id("com.google.relay") version "0.3.11"
+
 }
 
 android {
