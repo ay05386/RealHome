@@ -92,7 +92,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serliazation-converter:0.8.0")
+    //implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serliazation-converter:0.8.0")
     val paging_version = "3.2.1"
 
     implementation("androidx.paging:paging-runtime:$paging_version")
@@ -103,7 +103,7 @@ dependencies {
     //kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("com.google.accompanist:accompanist-pager:0.21.2-beta")
-    implementation("com.google.accompanist:accompanist-pager-indicator:0.21.2-beta")
+   // implementation("com.google.accompanist:accompanist-pager-indicator:0.21.2-beta")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.21.2-beta")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.21.2-beta")
     implementation("androidx.palette:palette-ktx:1.0.0")
