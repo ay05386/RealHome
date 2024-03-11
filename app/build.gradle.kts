@@ -161,7 +161,7 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-rxjava2")
 
 
-
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
 
 
     implementation("androidx.navigation:navigation-compose:2.7.6")
