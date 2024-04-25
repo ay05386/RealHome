@@ -1,10 +1,11 @@
 package com.example.data.local.dao
 
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.realhome.domain.model.propertyRemoteKey
-
+@Dao
 interface propertyRemoteKeyDao {
     @Query("SELECT * FROM PROPERTY_REMOTE_KEY_TABLE WHERE id = :id")
     suspend fun getRemoteKey(id:Int): propertyRemoteKey?
