@@ -12,6 +12,7 @@ import com.example.realhome.domain.model.Property
 import com.example.realhome.util.Constants.ITEMS_PER_PAGE
 import kotlinx.coroutines.flow.Flow
 @OptIn(ExperimentalPagingApi::class)
+@ExperimentalPagingApi
 class RemoteDataSourceImp (
     private val propertyApi: PropertyApi,
     private val propertyDatabase: propertyDatabase): RemoteDataSource {

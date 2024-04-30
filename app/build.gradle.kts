@@ -133,7 +133,8 @@ dependencies {
     // or only import the main APIs for the underlying toolkit systems,
     // such as input and measurement/layout
     implementation("androidx.compose.ui:ui")
-
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation("androidx.paging:paging-compose:3.3.0-beta01")
     // Android Studio Preview support
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
@@ -150,6 +151,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     // Optional - Add window size utils
     implementation("androidx.compose.material3:material3-window-size-class")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
 
     // Optional - Integration with activities
     implementation("androidx.activity:activity-compose:1.8.2")

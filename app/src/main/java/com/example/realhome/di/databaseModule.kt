@@ -19,7 +19,7 @@ object databaseModule {
 @Singleton
     fun providerDatabase(
         @ApplicationContext context: Context
-    ) :RoomDatabase{return Room.databaseBuilder(context,propertyDatabase::class.java,PROPERTY_DATABASE).build()}
+    ) :propertyDatabase{return Room.databaseBuilder(context,propertyDatabase::class.java,PROPERTY_DATABASE).build()}
 
 
 }
