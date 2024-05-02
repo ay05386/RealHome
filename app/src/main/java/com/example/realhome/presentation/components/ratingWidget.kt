@@ -105,14 +105,14 @@ fun halfFielldStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
     }
 }
 
-
+/*
 @Composable
 fun calculateStars():Map<String,Int>{
 
 }
 
 
-
+*/
 @Composable
 @Preview(showBackground = true)
 fun filledStarPreview(){
