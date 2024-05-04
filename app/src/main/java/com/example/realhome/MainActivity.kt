@@ -15,10 +15,11 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import androidx.paging.ExperimentalPagingApi
 import com.example.realhome.navigation.Setupnavgraph
 import com.example.realhome.ui.theme.RealHomeTheme
 import dagger.hilt.android.AndroidEntryPoint
-
+@ExperimentalPagingApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private lateinit var navController: NavHostController

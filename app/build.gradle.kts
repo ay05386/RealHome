@@ -7,7 +7,11 @@ plugins {
 
    // id 'com.google.relay' version '0.3.11'
     id("com.google.relay") version "0.3.11"
+   // id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 
+    id("com.google.dagger.hilt.android")
+ // id ("com.google.dagger.hilt.android") version "2.44" apply false
 }
 
 android {
@@ -79,15 +83,24 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
     val room_version = "2.6.1"
+    kapt ("android.arch.persistence.room:compiler:1.1.1")
+
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation ("androidx.room:room-runtime:$room_version")
+
+
+    implementation ("androidx.room:room-ktx:$room_version")
+    kapt ("androidx.room:room-compiler:$room_version")
 
     // To use Kotlin annotation processing tool (kapt)
  //   kapt("androidx.room:room-compiler:$room_version")
     // To use Kotlin Symbol Processing (KSP)
   //  ksp("androidx.room:room-compiler:$room_version")
-
+    implementation ("androidx.room:room-paging:$room_version")
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -99,7 +112,7 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
-    implementation("com.google.dagger:hilt-android:2.44")
+    implementation("com.google.dagger:hilt-android:2.48")
     //kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("com.google.accompanist:accompanist-pager:0.21.2-beta")
@@ -107,7 +120,12 @@ dependencies {
     implementation("com.google.accompanist:accompanist-swiperefresh:0.21.2-beta")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.21.2-beta")
     implementation("androidx.palette:palette-ktx:1.0.0")
-
+    implementation("com.google.dagger:hilt-android:2.48")
+   // kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("androidx.hilt:hilt-work:1.0.0")
+   // kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
     androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation("androidx.test:runner:1.5.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -117,7 +135,12 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
 
 
-
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    implementation("androidx.hilt:hilt-work:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     val composeBom = platform("androidx.compose:compose-bom:2023.10.01")
     implementation(composeBom)
@@ -139,6 +162,10 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
@@ -167,4 +194,7 @@ dependencies {
 
 
     implementation("androidx.navigation:navigation-compose:2.7.6")
+}
+kapt {
+    correctErrorTypes = true
 }

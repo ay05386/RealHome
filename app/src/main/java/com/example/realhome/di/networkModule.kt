@@ -10,6 +10,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
@@ -22,9 +23,10 @@ import javax.inject.Singleton
 @ExperimentalPagingApi
 @ExperimentalSerializationApi
 @Module
-@InstallIn(Singleton::class)
+@InstallIn(SingletonComponent::class)
 object networkModule {
-
+@Provides
+@Singleton
     fun providehttpclient():OkHttpClient{
         return OkHttpClient.Builder().readTimeout(15,TimeUnit.MINUTES)
             .connectTimeout(15,TimeUnit.MINUTES).build()

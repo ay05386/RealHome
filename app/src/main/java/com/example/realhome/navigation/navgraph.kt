@@ -7,11 +7,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import androidx.paging.ExperimentalPagingApi
 import com.example.realhome.presentation.screens.homeScreen.homeScreen
 //import com.example.realhome.presentation.screens.homeScreen.homeScreen
 import com.example.realhome.presentation.screens.splash.SplashScreen
 import com.example.realhome.util.Constants.DETAILS_ARGUMENT_ID
-
+@ExperimentalPagingApi
 @Composable
 fun Setupnavgraph(navController: NavHostController){
 NavHost(navController = navController, startDestination = Screen.Splash.route){
