@@ -109,7 +109,7 @@ dependencies {
     val paging_version = "3.2.1"
 
     implementation("androidx.paging:paging-runtime:$paging_version")
-
+    implementation("io.coil-kt:coil:1.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("com.google.dagger:hilt-android:2.48")

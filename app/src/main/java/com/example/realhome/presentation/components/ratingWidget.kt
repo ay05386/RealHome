@@ -1,5 +1,6 @@
 package com.example.realhome.presentation.components
 
+import android.annotation.SuppressLint
 import android.media.Rating
 import android.util.Log
 import androidx.compose.foundation.Canvas
@@ -30,7 +31,7 @@ import com.example.realhome.R
 import com.example.realhome.ui.theme.starColor
 
 @Composable
-fun ratingWidget(modifier: Modifier,rating: Double,scaleFactor:Float=3f,spaceBetween: Dp =6.dp){
+fun ratingWidget(modifier: Modifier,rating: Double,scaleFactor:Float=1f,spaceBetween: Dp =6.dp){
     val result= calculateStars(rating = rating)
 val starPathString = stringResource(id = R.string.star_path)
     val starPath = remember {
@@ -62,7 +63,7 @@ val starPathString = stringResource(id = R.string.star_path)
 
 @Composable
 fun filledStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
-    Canvas(modifier = Modifier.size(100.dp)){
+    Canvas(modifier = Modifier.size(24 .dp)){
         val canvasSize= size
         scale(scale=scaleFactor){
             val pathWidth = starPathBounds.width
@@ -85,7 +86,7 @@ fun filledStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
 
 @Composable
 fun emptyStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
-    Canvas(modifier = Modifier.size(100.dp)){
+    Canvas(modifier = Modifier.size(24.dp)){
         val canvasSize= size
         scale(scale=scaleFactor){
             val pathWidth = starPathBounds.width
@@ -105,7 +106,7 @@ fun emptyStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
 
 @Composable
 fun halfFielldStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
-    Canvas(modifier = Modifier.size(100.dp)){
+    Canvas(modifier = Modifier.size(24.dp)){
         val canvasSize= size
         scale(scale=scaleFactor){
             val pathWidth = starPathBounds.width
@@ -134,6 +135,7 @@ fun halfFielldStar(starPath:Path,starPathBounds:Rect,scaleFactor:Float){
 }
 
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun calculateStars(rating: Double):Map<String,Int>{
     val maxvalue by remember {
