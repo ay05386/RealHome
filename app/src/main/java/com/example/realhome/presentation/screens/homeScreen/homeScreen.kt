@@ -9,9 +9,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.paging.compose.collectAsLazyPagingItems
+import coil.annotation.ExperimentalCoilApi
 import com.example.realhome.presentation.common.listContent
 import com.example.realhome.presentation.components.ratingWidget
-
+@ExperimentalCoilApi
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun homeScreen(navHostController: NavHostController,homeViewModel: HomeViewModel = hiltViewModel()){
@@ -22,7 +23,7 @@ Scaffold(
         homeTopBar(onSearchClicked = {})
 
     }, content = {
-        listContent(property = Allproperties, navHostController =navHostController )
+        listContent(propertys = Allproperties, navHostController =navHostController )
 
     }
 )

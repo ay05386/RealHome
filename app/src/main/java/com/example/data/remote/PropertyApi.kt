@@ -14,4 +14,7 @@ interface PropertyApi {
     suspend fun searchProperty(
         @Query("name")name:String
     ):ApiResponse
+
+
+
 }

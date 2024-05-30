@@ -1,5 +1,6 @@
 package com.example.realhome.domain.model
 
+import android.media.Rating
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.realhome.util.Constants.PROPERTY_DATABASE_TABLE
@@ -16,5 +17,6 @@ data class Property(
     val type : String,
     val bedrooms :Int,
     val bathrooms:Int,
-    val image:String
+    val image:String,
+    val rating: Double
 )

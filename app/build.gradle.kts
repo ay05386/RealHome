@@ -60,6 +60,7 @@ android {
         }
     }
 }
+val paging_version = "3.0"
 
 dependencies {
     val nav_version = "2.7.6"
@@ -106,9 +107,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     //implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serliazation-converter:0.8.0")
-    val paging_version = "3.2.1"
+    //val paging_version = "3.2.1"
 
-    implementation("androidx.paging:paging-runtime:$paging_version")
+  //  implementation("androidx.paging:paging-runtime:$paging_version")
     implementation("io.coil-kt:coil:1.4.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
     implementation("androidx.datastore:datastore-preferences:1.0.0")
@@ -157,11 +158,11 @@ dependencies {
     // such as input and measurement/layout
     implementation("androidx.compose.ui:ui")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-    implementation("androidx.paging:paging-compose:3.3.0-beta01")
+   // implementation("androidx.paging:paging-compose:3.3.0-beta01")
     // Android Studio Preview support
     implementation("androidx.compose.ui:ui-tooling-preview")
     debugImplementation("androidx.compose.ui:ui-tooling")
-
+  //  implementation("androidx.paging:paging-compose:3.3.0-rc01")
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
@@ -170,6 +171,28 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
+
+
+
+
+
+ //   implementation("androidx.paging:paging-runtime:$paging_version")
+
+    // alternatively - without Android dependencies for tests
+  //  testImplementation("androidx.paging:paging-common:$paging_version")
+
+    // optional - RxJava2 support
+   // implementation("androidx.paging:paging-rxjava2:$paging_version")
+
+    // optional - RxJava3 support
+  //  implementation("androidx.paging:paging-rxjava3:$paging_version")
+
+    // optional - Guava ListenableFuture support
+  //  implementation("androidx.paging:paging-guava:$paging_version")
+
+    // optional - Jetpack Compose integration
+    implementation("androidx.paging:paging-runtime-ktx:3.1.1")
+    implementation("androidx.paging:paging-compose:1.0.0-alpha18")
     // Optional - Included automatically by material, only add when you need
     // the icons but not the material library (e.g. when using Material3 or a
     // custom design system based on Foundation)

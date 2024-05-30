@@ -1,7 +1,6 @@
 package com.example.realhome.presentation.components
 
 import android.annotation.SuppressLint
-import android.media.Rating
 import android.util.Log
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
@@ -22,7 +21,6 @@ import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.vector.PathParser
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -31,7 +29,7 @@ import com.example.realhome.R
 import com.example.realhome.ui.theme.starColor
 
 @Composable
-fun ratingWidget(modifier: Modifier,rating: Double,scaleFactor:Float=1f,spaceBetween: Dp =6.dp){
+fun ratingWidget(modifier: Modifier, rating: Double, scaleFactor:Float=1f, spaceBetween: Dp =6.dp){
     val result= calculateStars(rating = rating)
 val starPathString = stringResource(id = R.string.star_path)
     val starPath = remember {
